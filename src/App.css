@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+
+/* Alternatively, if you want to allow scrolling but hide the scrollbar */
+/* For all browsers */
+body {
+  margin: 0; /* Ensure no extra margins */
+  overflow: hidden; /* Hide scrollbars but disable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling without showing the scrollbar */
+}
+
+/* For Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
