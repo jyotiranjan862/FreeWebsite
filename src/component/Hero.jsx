@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../CSS/Hero.css';
 const Hero = () => {
     return (
         <div id="hero" className="relative w-full h-[calc(100vh-4rem)] overflow-hidden">
@@ -10,7 +10,7 @@ const Hero = () => {
             loop
             muted
           >
-            <source src="/path-to-your-video.mp4" type="video/mp4" />
+            <source src="/public/4354243-uhd_3840_2160_25fps.gif" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
     

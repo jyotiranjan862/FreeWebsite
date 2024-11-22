@@ -1,12 +1,18 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Nav from './component/Nav';
+import './component/Header';
+import HomePage from './component/HomePage';
+// import Nav from './component/Nav';
 import Home from './component/Home';
+import Header from './component/Header';
 
 function App() {
   return (
    <>
-   <Nav/>
+   <Header/>
+   <HomePage/>
+   {/* <Nav/> */}
+   <Header/>
    <Home/>
    </>
   );

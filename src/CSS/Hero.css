@@ -1,0 +1,112 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url('/public/4354243-uhd_3840_2160_25fps.gif') no-repeat center center/cover; /* Set the background GIF */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align horizontally center */
+  justify-content: center; /* Align vertically center */
+  overflow: hidden;
+  text-align: center; /* Center the text */
+}
+#hero{
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url('/public/4354243-uhd_3840_2160_25fps.gif') no-repeat center center/cover; /* Set the background GIF */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align horizontally center */
+  justify-content: center; /* Align vertically center */
+  overflow: hidden;
+  text-align: center; /* Center the text */
+}
+
+/* Content Styles */
+.content {
+  position: relative;
+  z-index: 1; /* Ensure content is on top of the GIF */
+  color: white;
+  max-width: 800px; /* Limit text width for better readability */
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.content h1 span {
+  color: #f045b5;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.content p {
+  margin-bottom: 40px;
+  color: #cccccc;
+  font-size: 1.2rem;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  gap: 20px; /* Add space between buttons */
+  justify-content: center; /* Ensure buttons are centered */
+}
+
+button {
+  background: linear-gradient(to right, #f045b5, #6a0dad);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(240, 69, 181, 0.7);
+}
+
+/* Decorative Circle */
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #ff0080, transparent);
+  border-radius: 50%;
+  top: 20%;
+  right: 10%;
+  animation: pulse 8s ease-in-out infinite, spin 15s linear infinite;
+}
+
+/* Circle Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
