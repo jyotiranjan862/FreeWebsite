@@ -5,14 +5,14 @@ import '../CSS/Footor.css';
 const Footor = memo(function Footor(props) {
   return (
    <>
-   <div>
-    <h1>Use Full Links</h1>
+   <div >
+    <h1 class="Foot">Use Full Links</h1>
     </div>
    <div>
-    <h1>About Us</h1>
+    <h1 class="Foot">About Us</h1>
    </div>
    <div>
-    <h1>
+    <h1 class="Foot">
         Contact Us
     </h1>
    </div>
@@ -21,7 +21,7 @@ const Footor = memo(function Footor(props) {
    <div></div>
    {/* Footer Text */}
    <div>
-      <h1>
+      <h1 class="Foot">
       Copyright ©Sherlock Studio. All Rights Reserved.
       </h1>
     </div>
