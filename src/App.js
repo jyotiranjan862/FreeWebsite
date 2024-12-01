@@ -1,23 +1,39 @@
-// import logo from './logo.svg';
-import './App.css';
-import './component/Header';
-import HomePage from './component/HomePage';
-// import Nav from './component/Nav';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './component/Home';
 import Header from './component/Header';
-import Footor from './component/Footor';
+import About from './component/About';
 
-function App() {
+const App = () => {
+  // Define your routes
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Header />
+          <Home />
+        </>
+      ),
+    },
+    {
+      path: "/about",
+      element: (
+        <>
+          <Header />
+          <About />
+        </>
+      ),
+    },
+  ]);
+
   return (
-   <>
-   <Header/>
-   <HomePage/>
-   {/* <Nav/> */}
-   <Header/>
-   <Home/>
-   <Footor/>
-   </>
+    <>
+      {/* RouterProvider to handle routing */}
+      <RouterProvider router={router} />
+     
+    </>
   );
-}
+};
 
 export default App;

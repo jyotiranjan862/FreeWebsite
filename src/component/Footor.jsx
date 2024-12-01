@@ -5,7 +5,7 @@ import '../CSS/Footor.css';
 const Footor = memo(function Footor(props) {
   return (
    <>
-   <div >
+   {/* <div >
     <h1 class="Foot">Use Full Links</h1>
     </div>
    <div>
@@ -18,7 +18,7 @@ const Footor = memo(function Footor(props) {
    </div>
    <div></div>
    <div></div>
-   <div></div>
+   <div></div> */}
    {/* Footer Text */}
    <div>
       <h1 class="Foot">
