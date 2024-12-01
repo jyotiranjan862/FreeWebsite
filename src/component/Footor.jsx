@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import '../CSS/Footor.css';
 
 const Footer = () => {
   useEffect(() => {
@@ -16,11 +17,7 @@ const Footer = () => {
         
         {/* Company Logo and Info */}
         <div data-aos="fade-up" className="flex flex-col items-center md:items-start">
-        <img 
-        src="../publi/logo.png"  // Path to your logo in the public folder
-        alt="Company Logo"
-        className="w-24 h-24 mb-4 transform transition-transform hover:scale-110" 
-      />
+        <img className="Logo" src="/logo.png" alt="Sherlock" />
 
           <p className="text-lg font-semibold">SherlockStudio</p>
           <p className="text-sm text-gray-300 mt-2">
