@@ -21,7 +21,7 @@ const Header = () => {
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-        <Link to="/login" className="login-btn">Login</Link>
+        <Link to="/login" className="login-btn">Log In</Link>
       </nav>
       <button 
         className="menu-toggle" 

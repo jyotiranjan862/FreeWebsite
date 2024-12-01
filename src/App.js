@@ -6,6 +6,7 @@ import About from "./component/About";
 import Service from "./component/Service";
 import ContactUs from "./component/ContactUs"; // Import the Contact Us component
 import Footer from "./component/Footor"; // Import the Footer component
+import Error from "./component/404";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const App = () => {
           <Footer /> {/* Footer will be rendered here for About route */}
         </>
       ),
+    },
+    {
+      path: "/login",
+      element: <Error/>
     },
     {
       path: "/services", // Define the /services route

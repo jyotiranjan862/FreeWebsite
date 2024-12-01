@@ -27,7 +27,7 @@ const Hero = () => {
               drive engagement across Real Estate, Gaming, and Tourism.
             </p>
             <button className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition">
-              Get Started
+              <a href="https://sherlockstudio.in/">Get Started</a>
             </button>
           </div>
         </div>

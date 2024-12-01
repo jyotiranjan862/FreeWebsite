@@ -1,0 +1,72 @@
+/* Page Layout */
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: radial-gradient(circle, #020024, #090979, #00d4ff);
+  color: white;
+  overflow: hidden;
+}
+
+/* Error Text */
+.error-text h1 {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin: 0;
+  text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff6f61;
+  animation: glow 2s infinite;
+}
+
+/* Error Message */
+.error-message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* UFO Styling */
+.ufo-svg {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+}
+
+/* Astronaut Section */
+.astronaut-section {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.astronaut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.astronaut-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.astronaut button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.astronaut button:hover {
+  background-color: #ffcc00;
+  color: #090979;
+}
