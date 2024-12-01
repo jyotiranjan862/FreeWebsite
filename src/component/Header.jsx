@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="header">
       <span>
-        <img className="Logo" src="/logo.png" alt="Sherlock" />
+        <img className="LogoHead" src="/logo.png" alt="Sherlock" />
       </span>
       <nav className={`menu ${menuOpen ? 'open' : ''}`}>
         <ul>
