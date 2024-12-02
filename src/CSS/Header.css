@@ -18,6 +18,9 @@ header {
   margin-left: 0;
   margin-right: auto;
 }
+.Logo{
+  width: 80px;
+}
 
 /* Navigation Menu */
 .menu {
