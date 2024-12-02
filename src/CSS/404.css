@@ -2,28 +2,32 @@
 body, html {
   margin: 0;
   padding: 0;
- 
   height: 100%;
   font-family: "Arial", sans-serif;
+ 
 }
 
 .not-found-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Adjusts spacing to ensure content fits */
-  height: 100vh; /* Ensures the page takes up the full viewport height */
+  justify-content: center; /* Centering content vertically */
+  height: 100vh; /* Full viewport height */
   text-align: center;
   background: radial-gradient(circle at top, #020024, #090979, #00d4ff);
   color: white;
   position: relative;
-  padding: 20px; /* Adds breathing room around the content */
+  padding: 20px;
   box-sizing: border-box;
 }
 
 /* Error Text */
+.error-text {
+  margin-top: 10px; /* Moves "404" to the top */
+}
+
 .error-text h1 {
-  font-size: 8rem;
+  font-size: 6rem; /* Large "404" text */
   font-weight: bold;
   color: #ffcc00;
   margin: 0;
@@ -33,17 +37,18 @@ body, html {
 
 /* Error Message */
 .error-message {
-  font-size: 1.5rem;
-  margin: 20px 0;
+  font-size: 1.2rem;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  padding: 0 20px;
+  line-height: 1.6;
+  padding: 0 15px;
+  margin-top: 10px;
 }
 
 /* UFO Styling */
 .ufo-svg {
-  width: 150px;
-  height: 150px;
+  width: 200px; /* Increased size for better visibility */
+  height: 200px;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -52,58 +57,149 @@ body, html {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
 /* Back to Earth Button */
 .back-to-earth-button {
+  margin-top: 20px; /* Spacing above button */
   padding: 15px 30px;
-  background-color: #ff4500;
-  color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #ffffff;
+  background-color: #ff4500;
   border: none;
   border-radius: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  transition: background-color 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; /* Ensures spacing between elements */
+  transition: all 0.3s ease;
 }
 
 .back-to-earth-button:hover {
   background-color: #ff6347;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(255, 99, 71, 0.5);
 }
 
 /* Astronaut Section */
 .astronaut-section {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  gap: 30px; /* Space between astronauts */
   margin-top: 20px;
+  flex-wrap: wrap; /* Ensure it wraps on mobile */
 }
 
 .astronaut {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px; /* Space between astronaut cards */
 }
 
 .astronaut-svg {
-  width: 100px;
+  width: 100px; /* Increased size */
   height: 100px;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.astronaut p {
+  font-size: 1rem; /* Larger text for readability */
+  margin: 10px 0;
+  color: #e6e6e6;
+}
+
+/* Call Button Styling */
+.astronaut button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.astronaut button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff6f61;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff6f61;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .not-found-page {
+    justify-content: flex-start; /* Align top for mobile */
+    padding: 10px;
+  }
+
   .error-text h1 {
-    font-size: 5rem;
+    font-size: 5rem; /* Scaled down for mobile */
   }
 
   .error-message {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .ufo-svg {
+    width: 150px; /* Smaller UFO size on mobile */
+    height: 150px;
+  }
+
+  .back-to-earth-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .astronaut p {
+    font-size: 0.9rem;
+  }
+
+  .astronaut button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .astronaut-section {
+    flex-direction: column; /* Stack astronaut section vertically on mobile */
+    gap: 20px; /* Increased space between items on mobile */
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-page {
+    justify-content: center;
+    
+  }
+
+  .error-text h1 {
+    font-size: 4rem; /* Smaller font size for very small screens */
+  }
+
+  .error-message {
+    font-size: 1rem;
   }
 
   .ufo-svg {
@@ -111,8 +207,22 @@ body, html {
     height: 120px;
   }
 
+  .astronaut-section {
+    gap: 15px;
+  }
+
+  .astronaut p {
+    font-size: 0.8rem; /* Smaller text for very small screens */
+  }
+
   .back-to-earth-button {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 8px 16px;
+  
+  }
+
+  .astronaut button {
+    font-size: 0.8rem;
+    padding: 8px 15px;
   }
 }
