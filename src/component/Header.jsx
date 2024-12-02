@@ -6,7 +6,10 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(prev => !prev); // Toggle the menu open state
+    setMenuOpen((prev) => {
+      console.log('Menu Open State:', !prev); // Log state to check if it's toggling
+      return !prev;
+    });
   };
 
   return (

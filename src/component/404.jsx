@@ -1,10 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "../CSS/404.css";
 
 const NotFound = () => {
+  const navigate = useNavigate();
+
   const callAstronaut = (number) => {
     window.location.href = `tel:${number}`;
+  };
+
+  const goBackToEarth = () => {
+    navigate("/"); // Redirects to the homepage or desired route
   };
 
   return (
@@ -56,6 +63,16 @@ const NotFound = () => {
           onCall={() => callAstronaut("9827778066")}
         />
       </div>
+
+      <motion.button
+        className="back-to-earth-button"
+        onClick={goBackToEarth}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        🪐 Back to Earth
+      </motion.button>
     </div>
   );
 };

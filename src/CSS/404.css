@@ -1,4 +1,11 @@
-/* Page Layout */
+/* General Page Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hides the scrollbar */
+  font-family: "Arial", sans-serif;
+}
+
 .not-found-page {
   display: flex;
   flex-direction: column;
@@ -6,9 +13,10 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background: radial-gradient(circle, #020024, #090979, #00d4ff);
+  background: radial-gradient(circle at top, #020024, #090979, #00d4ff);
   color: white;
-  overflow: hidden;
+  overflow: hidden; /* Prevents scrolling */
+  position: relative;
 }
 
 /* Error Text */
@@ -21,12 +29,22 @@
   animation: glow 2s infinite;
 }
 
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff6f61;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff6f61, 0 0 40px #ffcc00;
+  }
+}
+
 /* Error Message */
 .error-message {
   font-size: 1.5rem;
   margin: 20px 0;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  padding: 0 20px;
 }
 
 /* UFO Styling */
@@ -34,6 +52,16 @@
   width: 150px;
   height: 150px;
   margin: 20px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Astronaut Section */
@@ -54,6 +82,14 @@
   height: 100px;
 }
 
+.astronaut p {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
 .astronaut button {
   margin-top: 10px;
   padding: 5px 15px;
@@ -63,10 +99,74 @@
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .astronaut button:hover {
   background-color: #ffcc00;
   color: #090979;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Back to Earth Button */
+.back-to-earth-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-earth-button:hover {
+  background-color: #ff6347;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.5);
+}
+
+/* Beam Animation for UFO */
+.ufo-beam {
+  animation: beam-glow 1.5s infinite;
+}
+
+@keyframes beam-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-text h1 {
+    font-size: 5rem;
+  }
+
+  .error-message {
+    font-size: 1.2rem;
+  }
+
+  .ufo-svg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .astronaut-svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .back-to-earth-button {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
 }
