@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../CSS/Header.css';
-
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => {
+      console.log('Menu Open State:', !prev); // Log state to check if it's toggling
+      return !prev;
+    });
   };
 
   return (
-    <header>
+    <header className="header">
       <span>
-        <img className="Logo" src="/logo.png" alt="SherLock" />
+        <img className="LogoHead" src="/logo.png" alt="Sherlock" />
       </span>
       <nav className={`menu ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
-        <a href="#login" className="login-btn">Log In</a>
+        <Link to="/login" className="login-btn">Log In</Link>
       </nav>
       <button 
         className="menu-toggle" 

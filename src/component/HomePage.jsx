@@ -1,5 +1,6 @@
 import React from 'react';
 import '../CSS/Hero.css';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -7,15 +8,15 @@ const Hero = () => {
       <div className="hero-background"></div>
       <div className="content">
         <h1>
-          Welcome to <span>SherLock Studio</span>
+        <strong>Unlock Immersive Experiences <br /> with Cutting-Edge AR/VR Solutions</strong>
         </h1>
         <p>
-          Experience the future of design and development with our cutting-edge
-          solutions.
+        Blending technology and industry expertise to captivate audiences and
+        drive engagement across Real Estate, Gaming, and Tourism.
         </p>
         <div className="buttons">
-          <button>Get Started</button>
-          <button>Learn More</button>
+          <button><a href="https://sherlockstudio.in/">Get Started</a></button>
+          <button><Link to="/login" >Learn More</Link></button>
         </div>
       </div>
       <div className="circle"></div>
