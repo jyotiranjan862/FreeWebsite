@@ -5,16 +5,17 @@ import Offer from "./Offer";
 import Newsletter from "./Newsletter";
 import Review from "./Review";
 import Footor from "./Footor";
-// import Hero from "./Hero";
+// import Hero from "./HomePage";
+import Hero from "./Hero";
 
 const Home = () => {
   return (
-    <div className="mt[4rem] bg-[#0F0326] w-[100vw] min-h-[100vh] overflow-hidden">
+    <div className="mt[4rem] bg-[#2a1e4a]  w-[100vw] min-h-[100vh] overflow-hidden">
       {/* <Header/> */}
-      <HomePage />
-      {/* <Hero/> */}
+      {/* <HomePage /> */}
+      <Hero/>
       <div className="w-[90%] mx-auto pb-10">
-        <About />
+        {/* <About /> */}
         <Offer />
         <Newsletter />
         <Review />

@@ -7,7 +7,7 @@ const Service = () => {
     <>
     <div>
       {/* Hero Section */}
-      <div
+      {/* <div
         className="relative w-full h-[70vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url('/path-to-your-image.jpg')` }} // Replace with your image path
       >
@@ -26,12 +26,12 @@ const Service = () => {
             Our Services
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Services Section */}
       <div
         id="services"
-        className="min-h-screen bg-gradient-to-b from-[#231838] to-[#2c1f4f] py-16 flex justify-center items-center"
+        className="min-h-screen  py-16 flex justify-center items-center"
       >
         <div className="w-[90%] md:w-[80%] lg:w-[70%] bg-[#2a1e4a] rounded-xl shadow-lg p-8 relative overflow-hidden">
           <h2 className="text-3xl md:text-4xl font-bold text-[#D307D5] text-center mb-8 animate__animated animate__fadeIn animate__delay-3s">

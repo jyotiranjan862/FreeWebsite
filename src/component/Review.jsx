@@ -2,7 +2,7 @@ import React from "react";
 
 const Review = () => {
   return (
-    <div className="w-full min-h-[40vh] py-6">
+    <div className="w-full min-h-[40vh] py-6 mt-[4rem]">
       <h2 className="text-center text-[#D307D5] text-[2rem] md:text-[2.2rem] tracking-wide font-semibold">
         What we offer
       </h2>
